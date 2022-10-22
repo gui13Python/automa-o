@@ -81,17 +81,17 @@ while True: ########### RODA A FUNÇÃO INFINITA VEZES
              ##################################################################################################################
              ####################################### CLICA COM MOUSE E PARA BOTAO ESQUERDO E D PARA BOTAO DIREITO
                 
-                if keyboard.is_pressed('Shift') and keyboard.is_pressed('e'): 
+                if keyboard.is_pressed('Shift') and keyboard.is_pressed('e'): #### shift e tecla e clica no mouse com botao esquerdo
                    pyautogui.click(button='left')
                    
-                if keyboard.is_pressed('Shift') and keyboard.is_pressed('d'): 
+                if keyboard.is_pressed('Shift') and keyboard.is_pressed('d'): ### shift d tecla e clica no mouse com botao direito
                    pyautogui.click(button='right')   
                    
                    
-                if keyboard.is_pressed('space') and keyboard.is_pressed('c'):
+                if keyboard.is_pressed('space') and keyboard.is_pressed('c'): ### tecla espaço e tecla c segura alguma pasta para poder arrastar 
                    pyautogui.mouseDown()
                    
-                if keyboard.is_pressed('space') and keyboard.is_pressed('v'):
+                if keyboard.is_pressed('space') and keyboard.is_pressed('v'):##### tecla espaco mais tecla v solta o 'arquivo ou pasta '
                     pyautogui.mouseUp()
                    
                    
