@@ -1,14 +1,12 @@
 import keyboard ### BIBLIOTECA QUE CONTROLA TECLADO 
 import pyautogui #### PARA AUTOMAÇÃO CONTROLA TECLADO E MOUSE 
 import sys,os #######  CONTROLA SISTEMA DIRETORIOS , SISTEMA ETC.....
-import win32gui, win32con #### bilioteca para console 
-import time 
+import win32gui, win32con #### bilioteca para console , esconde telinha preta CMD )
+import time ### controla tempo 
 import os
-from gtts import gTTS
-from playsound import playsound
-import pyttsx3
+import pyttsx3 ### converte texto em voz 
 
-pastaAPP  = os.path.dirname(__file__)
+
 
 def fala():
     robo = pyttsx3.init()
@@ -35,13 +33,15 @@ def FALAexit():
 
 
 while True: ########### RODA A FUNÇÃO INFINITA VEZES
-        if keyboard.is_pressed('F3'): #### SE APERTAR ESSA TECLA (0)
+     #########################################################################################################
+             ##################################### FECHA O PROGAMA ###############################
+        if keyboard.is_pressed('F3'): #### SE APERTAR ESSA TECLA (F3)
                         FALAexit()
-                        exit() ###################### SAI DO PROGAMA
+                        exit() ###################### SAI DO PROGAMA, ENCERRA O PROGAMA
         try:
             def movimenta_mouse():  ### FUNCAO MOVIMENTA O MOUSE MAIS RAPIDO
-                keyboard.block_key('Tab')
-                keyboard.block_key('Alt')
+                keyboard.block_key('Tab')#### BLOQUEIA TECLA Tab
+                keyboard.block_key('Alt')####  BLOQUEIA TECLA Tab
                 pyautogui.FAILSAFE = False
                 
                 x , y = pyautogui.position()
@@ -96,18 +96,16 @@ while True: ########### RODA A FUNÇÃO INFINITA VEZES
                    
                    
                    
-             #########################################################################################################
-             ##################################### FECHA O PROGAMA ###############################
+            
              
                                 
                 
                      
-        ##########################################################################################################
-        ################################## CHAMA A FUNCAO PARA INICIAR O PROGAMA
+        
                     
-            movimenta_mouse()
+            movimenta_mouse() #### faz a chamada da função
             
-            
+            #### controla erro , porem não sei se isso é correto so que funcionou
 
         ############################################# SE CASO DER ERRO MACHE NOVAMENTO A FUNÇÃO#############################    
         except:
@@ -117,6 +115,7 @@ while True: ########### RODA A FUNÇÃO INFINITA VEZES
             print('erro na memoria ')
             movimenta_mouse()
             
+            ########################################## fim######################################################
             
             
                   
